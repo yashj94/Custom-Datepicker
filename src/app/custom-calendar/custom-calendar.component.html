@@ -1,0 +1,34 @@
+<div class="calendar-container">
+    <div class="calendar-header">
+      <!-- <button (click)="prevYear()">&#171;</button> -->
+      <button (click)="prevMonth()">&#10094;</button>
+      
+      <div class="month-year-selector">
+        <select [(ngModel)]="currentMonth" (change)="onMonthChange($event)">
+          <option *ngFor="let month of months" [value]="month.index" [selected]="month.index === currentMonth">{{ month.name }}</option>
+        </select>
+        <select [(ngModel)]="currentYear" (change)="onYearChange($event)">
+          <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+        </select>
+      </div>
+      
+      <button (click)="nextMonth()">&#10095;</button>
+      <!-- <button (click)="nextYear()">&#187;</button> -->
+    </div>
+    <div class="calendar-grid">
+      <div class="day-header" *ngFor="let day of ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']">{{ day }}</div>
+      <div class="day-cell" *ngFor="let day of daysInMonth">
+        <span *ngIf="day" 
+              (click)="selectDate(day)" 
+              [ngClass]="{
+                'today': day === currentDate.getDate() && currentMonth === currentDate.getMonth() && currentYear === currentDate.getFullYear(),
+                'selected': isSelected(day)
+              }">
+          {{ day }}
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+ 
