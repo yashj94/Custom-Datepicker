@@ -1,0 +1,38 @@
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%; /* Adjust to fit the container */
+  max-width: 180px; /* Optional: Limit the max width */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px 30px 8px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.calendar-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjusted to be inside the input */
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #666;
+  cursor: pointer;
+}
+
+app-custom-calendar {
+  position: absolute;
+  top: calc(100% + 5px); /* Adjust space between input and calendar */
+  left: 0;
+  z-index: 1000; /* Ensure the calendar appears above other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+  width: 100%; /* Adjust to fit the width of the input */
+}
+
+input[type="text"] {
+  padding-right: 40px; /* Adjusted to ensure space for the calendar icon */
+}

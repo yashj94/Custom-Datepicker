@@ -52,13 +52,11 @@ export class CustomCalendarComponent {
     const firstDayOfMonth = new Date(this.currentYear, this.currentMonth, 1).getDay();
     const daysInThisMonth = new Date(this.currentYear, this.currentMonth + 1, 0).getDate();
 
-    // Add empty days for the first week if the month doesn't start on Sunday
-    for (let i = 0; i < firstDayOfMonth; i++) {
+     for (let i = 0; i < firstDayOfMonth; i++) {
       this.daysInMonth.push(null!);
     }
 
-    // Add actual days of the month
-    for (let i = 1; i <= daysInThisMonth; i++) {
+     for (let i = 1; i <= daysInThisMonth; i++) {
       this.daysInMonth.push(i);
     }
   }

@@ -5,18 +5,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { DatePickerComponent } from './date-picker/date-picker.component';
-import { CustomCalendarComponent } from './custom-calendar/custom-calendar.component';
-import { HttpClientModule } from '@angular/common/http'; // Import this
-
+import { MyDatePickerModule } from 'projects/my-date-picker/src/public-api';   
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DatePickerComponent,
-    CustomCalendarComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http'; // Import this
     MatInputModule,
     MatIconModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MyDatePickerModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

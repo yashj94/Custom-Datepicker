@@ -1,0 +1,10 @@
+{
+  "name": "dynamic-date-converter",
+  "version": "1.0.1",
+  "description": "A date picker library for Angular.",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "build": "ng build my-date-picker"
+  }
+}

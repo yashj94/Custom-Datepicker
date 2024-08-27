@@ -1,0 +1,41 @@
+ 
+
+<div class="container">
+  <!-- <h1>Date Picker Example</h1> -->
+   
+  <!-- <label for="datepicker">Select a date:</label>
+  <div class="input-wrapper">
+    <input type="text" id="datepicker" [placeholder]="selectedFormat" [(ngModel)]="selectedDate">
+    <svg width="22" height="22" viewBox="0 0 89 89" fill="none" xmlns="http://www.w3.org/2000/svg" class="calendar-icon" (click)="toggleCalendar()">
+      <path d="M7.41675 70.4584C7.41675 76.7626 12.2376 81.5834 18.5417 81.5834H70.4584C76.7626 81.5834 81.5834 76.7626 81.5834 70.4584V40.7917H7.41675V70.4584ZM70.4584 14.8334H63.0417V11.1251C63.0417 8.90008 61.5584 7.41675 59.3334 7.41675C57.1084 7.41675 55.6251 8.90008 55.6251 11.1251V14.8334H33.3751V11.1251C33.3751 8.90008 31.8917 7.41675 29.6667 7.41675C27.4417 7.41675 25.9584 8.90008 25.9584 11.1251V14.8334H18.5417C12.2376 14.8334 7.41675 19.6542 7.41675 25.9584V33.3751H81.5834V25.9584C81.5834 19.6542 76.7626 14.8334 70.4584 14.8334Z" fill="#797979"/>
+      <rect x="18" y="47" width="9" height="7" fill="white"/>
+      <rect x="18" y="64" width="9" height="7" fill="white"/>
+      <rect x="40" y="47" width="9" height="7" fill="white"/>
+      <rect x="40" y="64" width="9" height="7" fill="white"/>
+      <rect x="62" y="47" width="9" height="7" fill="white"/>
+      <rect x="62" y="64" width="9" height="7" fill="white"/>
+    </svg>
+    <app-custom-calendar *ngIf="showCalendar" (dateSelected)="onDateSelected($event)"></app-custom-calendar>
+  </div> -->
+
+  <mat-form-field appearance="outline">
+    <mat-label>Enter date</mat-label>
+    <input matInput [placeholder]="selectedFormat" [(ngModel)]="selectedDate">
+   
+    <svg width="22" height="22" viewBox="0 0 89 89" fill="none" xmlns="http://www.w3.org/2000/svg" class="calendar-icon" (click)="toggleCalendar()">
+      <path d="M7.41675 70.4584C7.41675 76.7626 12.2376 81.5834 18.5417 81.5834H70.4584C76.7626 81.5834 81.5834 76.7626 81.5834 70.4584V40.7917H7.41675V70.4584ZM70.4584 14.8334H63.0417V11.1251C63.0417 8.90008 61.5584 7.41675 59.3334 7.41675C57.1084 7.41675 55.6251 8.90008 55.6251 11.1251V14.8334H33.3751V11.1251C33.3751 8.90008 31.8917 7.41675 29.6667 7.41675C27.4417 7.41675 25.9584 8.90008 25.9584 11.1251V14.8334H18.5417C12.2376 14.8334 7.41675 19.6542 7.41675 25.9584V33.3751H81.5834V25.9584C81.5834 19.6542 76.7626 14.8334 70.4584 14.8334Z" fill="#797979"/>
+      <rect x="18" y="47" width="9" height="7" fill="white"/>
+      <rect x="18" y="64" width="9" height="7" fill="white"/>
+      <rect x="40" y="47" width="9" height="7" fill="white"/>
+      <rect x="40" y="64" width="9" height="7" fill="white"/>
+      <rect x="62" y="47" width="9" height="7" fill="white"/>
+      <rect x="62" y="64" width="9" height="7" fill="white"/>
+    </svg>
+  
+
+    <app-custom-calendar *ngIf="showCalendar" (dateSelected)="onDateSelected($event)"></app-custom-calendar>
+  </mat-form-field>
+</div>
+
+
+ 
